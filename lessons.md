@@ -1,5 +1,17 @@
 # Lessons
 
+### 2026-06-16 — One sonilo_music prompt with timecoded beats gives a usable continuous bed
+
+**Pattern**: For a music bed matching a narrative arc, write ONE `sonilo_music` prompt that spells out the emotional beats with explicit timecodes (e.g. "lost 0-9s … awe 13-22s … calm resolution 48-52s"). The RMS energy profile tracked the requested arc on the first generation — no segment-stitching needed. Cost ~3 credits for 52s.
+**Rule**: ALWAYS describe the full arc with timecodes in a single music prompt and verify the result with an RMS/loudness profile before muxing; don't pre-build per-segment beds.
+**Why**: The old 29s bed was hand-stitched from seg1/seg2/seg3 + SFX; the single-prompt 52s bed was cleaner and faster, and `loudnorm I=-14` landed it in YouTube range.
+
+### 2026-06-16 — gitignore review-frame extractions before committing a media repo
+
+**Pattern**: ffmpeg `fps=N` review extractions accumulate fast (309MB / 426 frames here). They're re-derivable QA artifacts, not source. Gitignore `**/review/` and `*-review/` so only the reference bible, clips, and final cuts get committed.
+**Rule**: NEVER commit extracted review frames to a media repo — gitignore them; keep ref/end frames, clips, and final cuts.
+**Why**: Kept the public higgsfield-mcp commit at 185MB instead of 490MB, all files <16MB (under GitHub's 100MB limit).
+
 ### 2026-06-16 — nano_banana models removed from MCP catalog
 
 **Pattern**: `nano_banana_flash`/`nano_banana_2` no longer exist in the Higgsfield MCP — calls error "unknown model". Use `seedream_v4_5` for reference/composition-continuation and `seedream_v5_lite` for instruction edits.

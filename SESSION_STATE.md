@@ -55,3 +55,25 @@ All in: /Users/mukulkulkarni/VS Code Projects/higgsfield-mcp/assets/frames/
 ### Notes
 - nano_banana_flash/nano_banana_2 REMOVED from API catalog — use seedream_v4_5 (precise/transform) or seedream_v5_lite (instruction edit) instead
 - Video analysis of joined-v6: clean 4-scene ad structure, no inconsistencies flagged
+
+## Delivery Cuts (2026-06-16)
+### Music bed
+- sonilo_music job: cd6751db-22b9-45e4-86a0-93ab8c9b5f7e (52s, full emotional arc)
+- File: assets/audio/music-bed-v1.m4a
+
+### Output files (all in assets/videos/)
+- final-v1.mp4          — source 51.8s narrative (mixed Seedance audio)
+- final-v1-music.mp4    — MARKETING/YouTube cut: music bed replaces Seedance audio,
+                          fade in/out, loudnorm I=-14 TP=-1.5 (measured ~-12.3 LUFS)
+- final-v1-scroll.mp4   — landing-page scroll variant, SILENT (audio stream stripped)
+- final-v1-scroll.webm  — same, VP9 CRF 32 (~5.9MB)
+
+### Landing-page deploy
+- Yuga-odysseys-v1/.../landing-page/assets/videos/user-journey.{mp4,webm} replaced
+  with the silent scroll variants. Originals saved as *.bak alongside.
+- Page <video> is muted+loop+playsinline, plays on scroll-into-view (IntersectionObserver,
+  animations.js). Full 51.8s kept per decision; GSAP timeline holds ~4s of it on scroll-past.
+
+### Committed
+- github.com/Hrykan/higgsfield-mcp @ b908082 — curated source assets (clips, ref/end frames,
+  final cuts, music bed, HyperFrames project). *-review/ QA frames gitignored.
