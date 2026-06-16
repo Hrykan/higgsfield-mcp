@@ -1,0 +1,21 @@
+# OS / editor
+.DS_Store
+*.swp
+
+# Tooling / local agent state
+.claude/
+.agents/
+node_modules/
+skills-lock.json
+
+# HyperFrames caches
+**/.thumbnails/
+**/.waveform-cache/
+
+# Disposable QA review frames (ephemeral ffmpeg extractions, re-derivable)
+assets/frames/*-review/
+**/review/
+assets/frames/act2/cuts/
+
+# Backups
+*.bak
