@@ -56,17 +56,24 @@ All in: /Users/mukulkulkarni/VS Code Projects/higgsfield-mcp/assets/frames/
 - nano_banana_flash/nano_banana_2 REMOVED from API catalog — use seedream_v4_5 (precise/transform) or seedream_v5_lite (instruction edit) instead
 - Video analysis of joined-v6: clean 4-scene ad structure, no inconsistencies flagged
 
-## Delivery Cuts (2026-06-16)
+## Delivery Cuts (2026-06-16, ending revised 2026-06-18)
 ### Music bed
-- sonilo_music job: cd6751db-22b9-45e4-86a0-93ab8c9b5f7e (52s, full emotional arc)
-- File: assets/audio/music-bed-v1.m4a
+- sonilo_music v1: cd6751db-22b9-45e4-86a0-93ab8c9b5f7e (52s, calm-fade ending) → music-bed-v1.m4a
+- sonilo_music v2: ed89e52e-3468-420a-8646-89584ef08aa4 (52s) → music-bed-v2.m4a
+- sonilo_music v3: 480c37da-307b-4ded-b6b5-0a3f1d421d74 (54s, strongest climax) → music-bed-v3.m4a
+- FINAL bed: v3 body (0-48s) + v3 climax slice (38-44s) acrossfaded → sustains a triumphant
+  swell through the 48-52s wordmark, 0.3s button. (sonilo always cadences down at the end —
+  see lessons.md. Fixed in post, not by prompt.)
 
 ### Output files (all in assets/videos/)
-- final-v1.mp4          — source 51.8s narrative (mixed Seedance audio)
-- final-v1-music.mp4    — MARKETING/YouTube cut: music bed replaces Seedance audio,
-                          fade in/out, loudnorm I=-14 TP=-1.5 (measured ~-12.3 LUFS)
-- final-v1-scroll.mp4   — landing-page scroll variant, SILENT (audio stream stripped)
-- final-v1-scroll.webm  — same, VP9 CRF 32 (~5.9MB)
+- final-v1.mp4              — source 51.8s narrative (mixed Seedance audio)
+- final-v1-music.mp4        — MARKETING/YouTube cut (CANONICAL): swell-ending bed replaces
+                              Seedance audio, loudnorm I=-14 TP=-1.5 (~-11.9 LUFS),
+                              triumphant climax holds under wordmark (~-14 dB last 4s)
+- final-v1-music-swell.mp4  — same as canonical (swell build, kept for clarity)
+- final-v1-music-calm.mp4.bak — earlier calm-fade version (superseded)
+- final-v1-scroll.mp4       — landing-page scroll variant, SILENT (audio stream stripped)
+- final-v1-scroll.webm      — same, VP9 CRF 32 (~5.9MB)
 
 ### Landing-page deploy
 - Yuga-odysseys-v1/.../landing-page/assets/videos/user-journey.{mp4,webm} replaced

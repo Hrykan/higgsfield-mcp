@@ -1,5 +1,11 @@
 # Lessons
 
+### 2026-06-18 — sonilo_music always cadences DOWN in the final ~3s; fix the ending in post
+
+**Pattern**: `sonilo_music` has a hard bias to resolve/decrescendo in the last ~3 seconds regardless of prompt. Three generations explicitly demanding "end on a triumphant peak / no fade / SLAMS in at 48s and rings out" all still dropped to -30 to -50 dB at the very end. Prompt engineering does not beat this bias.
+**Rule**: NEVER rely on the prompt alone for a hard-ending swell. Generate the bed, then in post crossfade the track's own loud climax section over its soft tail (e.g. body 0-48s + a 6s loud-climax slice acrossfade d=2) so full energy sustains to the end, then add a tiny 0.3s button — not a long fade.
+**Why**: The yuga.life brand reveal (golden burst → wordmark) lands at 48-52s; the model's fade killed it. Extending v3's 38-44s climax in post held the last 4s at ~-14 dB (vs -32 dB faded) and landed a clean triumphant button. Cost 3 paid passes before switching to the post fix.
+
 ### 2026-06-16 — One sonilo_music prompt with timecoded beats gives a usable continuous bed
 
 **Pattern**: For a music bed matching a narrative arc, write ONE `sonilo_music` prompt that spells out the emotional beats with explicit timecodes (e.g. "lost 0-9s … awe 13-22s … calm resolution 48-52s"). The RMS energy profile tracked the requested arc on the first generation — no segment-stitching needed. Cost ~3 credits for 52s.
